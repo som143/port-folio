@@ -7,5 +7,6 @@ import jobs.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home', jobs.views.home, name = 'home'),
+    path('', jobs.views.home, name = 'home'),
+    path('tickets' , jobs.views.alldata , name = 'dashboard')
 ]
