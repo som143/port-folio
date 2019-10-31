@@ -25,7 +25,7 @@ SECRET_KEY = '@uq#lg+!q+g1%7-t=&+gqwvo=#1)hrj!qk2-ly607xq_u(wr=u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1.xip.io','127.0.0.1','0.0.0.0.xip.io','0.0.0.0']
 
 
 # Application definition
@@ -69,8 +69,15 @@ TEMPLATES = [
         },
     },
 ]
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='975177142718-8nbfcmsunu8tkjn2uj28d6t40jc17g3h.apps.googleusercontent.com'  #Paste CLient Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'iPKoDmoj3NlYAB9uSt5f00o8' #Paste Secret Key
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
+#EMAIL_HOST = 'spanda2@ext.uber.com'
+#EMAIL_PORT = '*'
+EMAIL_HOST_USER = 'spanda2@ext.uber.com'
+EMAIL_HOST_PASSWORD = 'Rocky@1992'
+EMAIL_USE_TLS = True
 
 
 # Database
