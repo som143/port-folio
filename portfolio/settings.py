@@ -25,14 +25,14 @@ SECRET_KEY = '@uq#lg+!q+g1%7-t=&+gqwvo=#1)hrj!qk2-ly607xq_u(wr=u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1.xip.io','127.0.0.1','0.0.0.0.xip.io','0.0.0.0']
+ALLOWED_HOSTS = ['127.0.0.1.xip.io','127.0.0.1','0.0.0.0.xip.io','0.0.0.0','172.22.20.170']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig',
-    #'jobs.apps.JobsConfig',
+    
+    
     'jobs.apps.JobsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -74,7 +74,7 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'iPKoDmoj3NlYAB9uSt5f00o8' #Paste Secret Key
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 #EMAIL_HOST = 'spanda2@ext.uber.com'
-#EMAIL_PORT = '*'
+EMAIL_PORT = '*'
 EMAIL_HOST_USER = 'spanda2@ext.uber.com'
 EMAIL_HOST_PASSWORD = 'Rocky@1992'
 EMAIL_USE_TLS = True
@@ -85,12 +85,18 @@ EMAIL_USE_TLS = True
 
 DATABASES = {
     'default': {
-        'ENGINE' : 'django.db.backends.postgresql',
-        'NAME' : 'portfoliodb',
-        'USER' : 'postgres',
-        'PASSWORD': 'Rocky@1992',
-        'HOST':'localhost',
-        'PORT' : '5432'
+       # 'ENGINE' : 'django.db.backends.postgresql',
+       # 'NAME' : 'portfoliodb',
+       # 'USER' : 'postgres',
+       # 'PASSWORD': 'Rocky@1992',
+       # 'HOST':'localhost',
+       # 'PORT' : '5432'
+       'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'br_reporting',
+        'USER':'hemantjain',
+        'PASSWORD':'2UTi04_jiNoC',
+        'HOST':'hyd1-qaaudit-prod-node01',
+        'PORT':'7799'
     }
 }
 
